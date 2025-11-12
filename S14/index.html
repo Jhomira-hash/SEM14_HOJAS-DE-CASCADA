@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- DOCTYPE declara que este documento es HTML5 -->
+<html lang="es">
+<head>
+  <!-- Metadatos básicos -->
+  <meta charset="UTF-8"> <!-- Codificación de caracteres: UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive: adapta la escala al ancho del dispositivo -->
+  <title>Mi Página Bootstrap</title> <!-- Título que aparece en la pestaña del navegador -->
+
+  <!-- ===== Bootstrap 5 (CDN) =====
+       Aquí se cargan los estilos y scripts de Bootstrap desde un CDN.
+       Nota: las versiones en tu ejemplo usan 5.3.3; en producción verifica la versión y la integridad si es necesario. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- CSS personalizado: estilos locales que sobrescriben o complementan a Bootstrap -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= Header con Navbar ================= -->
+  <header>
+    <!-- navbar-expand-lg -> se expande en pantallas grandes; navbar-dark bg-primary -> tema oscuro sobre fondo primario -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-up">
+      <div class="container"><!-- container centra y limita ancho del contenido -->
+        <a class="navbar-brand" href="#">NovaTech-PRO</a> <!-- Marca / logo de la web -->
+        <!-- Botón que aparece en pantallas pequeñas para desplegar/colapsar el menú -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+          <span class="navbar-toggler-icon"></span> <!-- Icono hamburguesa que provee Bootstrap -->
+        </button>
+
+        <!-- Menú colapsable: en móviles está oculto y se muestra con el toggler -->
+        <div class="collapse navbar-collapse" id="menu">
+          <!-- ms-auto empuja el menú a la derecha (margin start auto) -->
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#servicios">Soluciones</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Clientes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contactos</a></li>
+ 
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= Main (contenido principal) ================= -->
+  <main>
+    <!-- ===== Sección Hero / Inicio =====
+         bg-light -> fondo claro, text-center -> centra texto, p-5 -> padding amplio -->
+    <section id="inicio" class="hero-section fixed-up text-center p-5">
+      <div class="container">
+        <!-- display-4 es una clase de Bootstrap para títulos grandes -->
+        <h2 class="display-4 mb-4">Impulsa tu Empresa</h>
+        <!-- lead da un estilo de subtítulo descriptivo -->
+        <p class="lead">Estrategias digitales lideres del mañana</p>
+        <!-- Enlace que funciona como botón y lleva a la sección servicios -->
+        <a href="#servicios" class="btn btn-primary">Descubrir más</a>
+      </div>
+    </section>
+
+<section id="soluciones" class="py-5"><!-- py-5 -> padding vertical -->
+  <div class="container">
+    <h2 class="text-center mb-4"> Nuestras Soluciones</h2>
+
+    <h3 class="class="display-4>Consultoria Estrategica </h3>
+       <p class="lead">Diagnóstico digital, planificación de sistemas, innovación de procesos internos</p>
+ 
+    <h3 class="class="display-4>Desarrollo a Medida</h3>
+       <p class="lead">Aplicaciónes WEB y movíles, creadas sepun tus procesos y flujos especificos </p>
+    <h3 class="class="display-4>Desarrollo a Medida</h3>
+    <p class="lead">Aplicaciónes WEB y movíles, creadas sepun tus procesos y flujos especificos </p>
+
+
+
+    </div>
+  </section>
+
+
+
+
+    <!-- ===== Sección de Cards (Servicios) ===== -->
+    <section id="servicios" class="py-5"><!-- py-5 -> padding vertical -->
+      <div class="container">
+        <h2 class="text-center mb-4">Nuestros Servicios</h2>
+        <div class="row"><!-- row de Bootstrap para filas; dentro van columnas (.col-*) -->
+          <!-- Cada columna ocupa 4/12 en md (col-md-4) -> en desktop se ven 3 tarjetas por fila -->
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+             <div class="col-md-4">
+                <img src="https://picsum.photos/300/200" class="img-fluid rounded-start" alt="...">
+            </div>
+
+                 <div class="col-md-8">
+                     <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                       <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                 </div>
+         </div>
+      </div>
+
+
+
+
+          <!-- Segunda tarjeta: misma estructura, diferente contenido/imágen -->
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+             <div class="col-md-4">
+                <img src="https://picsum.photos/300/200" class="img-fluid rounded-start" alt="...">
+            </div>
+
+                 <div class="col-md-8">
+                     <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                       <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                 </div>
+         </div>
+      </div>
+
+
+          <!-- Tercera tarjeta -->
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+             <div class="col-md-4">
+                <img src="https://picsum.photos/300/200" class="img-fluid rounded-start" alt="...">
+            </div>
+
+                 <div class="col-md-8">
+                     <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                       <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                 </div>
+         </div>
+      </div>
+    </section>
+
+    <!-- ===== Sección de Contacto ===== -->
+    <section id="contacto" class="bg-light py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Contáctanos</h2>
+
+        <!-- Formulario: clase col-md-6 offset-md-3 centra el formulario ocupando 6 columnas y desplazándose 3 (centrado) -->
+        <form class="col-md-6 offset-md-3">
+          <!-- mb-3 -> margin-bottom para separar campos -->
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <!-- input tipo texto con estilos de Bootstrap; required obliga a completar -->
+            <input type="text" class="form-control" id="nombre" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico</label>
+            <!-- input tipo email aplica validación básica de email en HTML5 -->
+            <input type="email" class="form-control" id="correo" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <!-- textarea para mensajes largos; rows controla la altura inicial -->
+            <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+          </div>
+
+          <div class="text-center">
+            <!-- Botón de envío; type="submit" enviaría el formulario -->
+            <button type="submit" class="btn btn-success">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class=" navbar-expand-lg navbar-dark bg-custom fixed-up" text-white text-center p-3">
+    <!-- p.mb-0 evita margin bottom en el párrafo para que el footer tenga padding uniforme -->
+    <p class="mb-0">© 2025 MiWeb. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
